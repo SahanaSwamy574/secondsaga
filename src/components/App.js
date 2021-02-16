@@ -32,7 +32,7 @@ class App extends Component {
     render(){
         const users = this.props.users;
         return (
-            <div style={{margin: '0 auto', padding: '20px', maxWidth: '600px'}}>
+            <div className= "users">
                 <h2>
                     Users
                 </h2>

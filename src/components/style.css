@@ -1,0 +1,29 @@
+.users{
+    margin: '0 auto',
+    padding: '20 px', 
+     maxWidth: '600px'
+}
+
+.firstlastname{
+    
+        margin: 'auto 0',
+        text Align: 'center',
+        height: '40px',
+        width: '40px',
+        lineHeight: '40px',
+        borderRadius: '50%',
+        color: 'white',
+        fontWeight: 'bold'
+        
+}
+
+.first{
+    display: flex;
+}
+
+.displaynames{
+    margin: 'auto 0',
+    flexGrow: 1,
+    paddingLeft: '10px'
+}
+

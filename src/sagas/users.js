@@ -17,7 +17,7 @@ function* getUsers(){
 }
 
 function* watchGetUsersRequest(){
-	yield takeEvery(actions.Types.GET_USERS_REQUEST, getUsers);
+	yield takeEvery(actions.User_Request.GET_USERS_REQUEST, getUsers);
 }
 
 function* deleteUser(userId){
@@ -34,7 +34,7 @@ function* deleteUser(userId){
 
 function* watchDeleteUserRequest(){
     while(true){
-        const {payload} = yield take(actions.Types.DELETE_USER_REQUEST);
+        const {payload} = yield take(actions.User_Request.DELETE_USER_REQUEST);
         yield call(deleteUser, payload.userId);
     }
 }
@@ -56,7 +56,7 @@ function* createUser({payload}){
 }
 
 function* watchCreateUserRequest(){
-    yield takeLatest(actions.Types.CREATE_USER_REQUEST, createUser);
+    yield takeLatest(actions.User_Request.CREATE_USER_REQUEST, createUser);
 }
 
 const userSagas = [

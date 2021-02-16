@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button} from 'reactstrap';
+import "./style.css";
 
 const UserListItem = ({user, onDeleteClick}) => {
 
@@ -14,23 +15,14 @@ const UserListItem = ({user, onDeleteClick}) => {
     };
 
     return (
-        <div style={{display: 'flex'}}>
-            <div style={{
-                margin: 'auto 0',
-                textAlign: 'center',
-                height: '40px',
-                width: '40px',
-                lineHeight: '40px',
-                borderRadius: '50%',
-                color: 'white',
-                fontWeight: 'bold',
-                background: stringToHslColor(user.firstName + user.lastName)}}>
+        <div className="first">
+            <div className="firstlastname">
                 {!!user && !!user.firstName && !!user.lastName ? user.firstName[0].toUpperCase() + user.lastName[0].toUpperCase() : ''}
             </div>
-            <div style={{margin: 'auto 0', flexGrow: 1, paddingLeft: '10px'}}>
+            <div className="displaynames">
                 {user.firstName} {user.lastName}
             </div>
-            <div style={{margin: 'auto 0'}}>
+            <div >
                 <Button size="sm" color="danger" outline onClick={() => onDeleteClick(user.id)}>
                     Delete
                 </Button>

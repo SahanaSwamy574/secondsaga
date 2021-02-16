@@ -1,4 +1,4 @@
-import {Types} from '../actions/users';
+import {User_Request} from '../actions/users';
 
 const INITIAL_STATE = {
     items: []
@@ -6,13 +6,13 @@ const INITIAL_STATE = {
 
 export default function users(state = INITIAL_STATE, action) {
     switch (action.type) {
-        case Types.GET_USERS_SUCCESS:{
+        case User_Request.GET_USERS_SUCCESS:{
             return {
                 ...state,
                 items: action.payload.items
             }
         }
-        case Types.USERS_ERROR: {
+        case User_Request.USERS_ERROR: {
             return {
                 ...state,
                 error: action.payload.error
